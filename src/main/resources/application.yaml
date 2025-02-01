@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: library
+  datasource:
+    url: jdbc:h2:file:./src/main/resources/data/db
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  sql:
+    init:
+      mode: always
+  jpa:
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+logging:
+  level:
+    org.springframework.jdbc.datasource.init: DEBUG
